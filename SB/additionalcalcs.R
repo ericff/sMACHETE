@@ -1045,7 +1045,7 @@ aml.similar.gene.names <- sort(first.pass.aml.chimera.similar.gene.names[(H_gene
 
 ## OLD (same): aml.similar.gene.names <- c("BOD1L1-BOD1","EIF3I-EIF3IP1","HLA-A-HLA-E",  "HLA-C-HLA-B", "HLA-DPA1-HLA-DPB1", "HLA-E-HLA-B", "NBPF1-NBPF15", "SAFB2-SAFB")
 
-chart.colnames <- c("Only detected\nby\nChimerSeq", "Only detected\nby\nsMACHETE")
+chart.colnames <- c("Detected\nby\nChimerSeq", "Detected\nby\nsMACHETE")
 chart.rownames <- c("Total Gold\nStandards (rate)", "Fusions \nbetween genes with\nsimilar gene names\n(presumed False\nPositives)")
 ## chart.rownames <- c("Total Gold\nStandards (rate)", "Non-AML fusions \nbetween genes with\nsimilar gene names\n(presumed False\nPositives)")
 

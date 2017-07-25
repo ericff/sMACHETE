@@ -17,7 +17,8 @@ barplot.heights <- df.chimera$counts
 barplot.names <- df.chimera$nicenames
 barplot.colors <- c(rep(color.choices[1], length(df.chimera$counts)))
 barplot.spaces <- rep(0.2,length(barplot.heights))
-barplot.title <- "A. Number of Body Map Samples in Which\nChimerSeq Fusions Found"
+barplot.title <- "A. ChimerSeq"
+## barplot.title <- "A. Number of Body Map Samples in Which\nChimerSeq Fusions Found"
 
 
 ## barplot for smachete:
@@ -25,7 +26,8 @@ sm.heights <- counts.for.genenames.in.called.cancers.and.also.in.bodymap.sbt
 sm.names <- genenames.in.called.cancers.and.also.in.bodymap.sbt
 sm.colors <- c(rep(color.choices[1], length(sm.names)))
 sm.spaces <- rep(0.2,length(sm.heights))
-sm.title <- "B. Number of Body Map\nSamples in Which\nsMACHETE Fusions Found"
+## sm.title <- "B. Number of Body Map\nSamples in Which\nsMACHETE Fusions Found"
+sm.title <- "B. sMACHETE"
 
 
 
@@ -44,11 +46,12 @@ op <- par(mar= c(5.5,4,4,2) + 0.1)
 plot1 <- barplot(barplot.heights, names.arg=barplot.names, horiz=F, las=2, cex.names= 0.55, cex.axis = 0.7, space=barplot.spaces, col=barplot.colors, main=barplot.title, cex.main = 0.85, ylim=c(0,17))
 
 ## doing mtext location manually
+## mtext.location <- 5.8
 mtext.location <- 5.8
 mtext.padj <- 0.5
 
 
-mtext(text=paste("FUSIONS"), side=1, line=5, outer=FALSE, cex=0.7, at=mtext.location, padj=mtext.padj)
+mtext(text=paste("Fusions Found in Body Map Samples"), side=1, line=5, outer=FALSE, cex=0.5, at=mtext.location, padj=mtext.padj)
 
 
 ## barplot for smachete:
@@ -59,11 +62,12 @@ op <- par(mar= c(5.5,4,4,2) + 0.1)
 plot2 <- barplot(sm.heights, names.arg=sm.names, horiz=F, las=2, cex.names= 0.55, cex.axis = 0.7, space=sm.spaces, col=sm.colors, main=sm.title, cex.main = 0.8, ylim=c(0,17))
 
 ## doing mtext location manually
+## mtext.location <- 2
 mtext.location <- 2
 mtext.padj <- 0.5
 
 
-mtext(text=paste("FUSIONS"), side=1, line=5, outer=FALSE, cex=0.7, at=mtext.location, padj=mtext.padj)
+mtext(text=paste("Fusions Found in Body Map Samples"), side=1, line=5, outer=FALSE, cex=0.5, at=mtext.location, padj=mtext.padj)
 
 
 
@@ -147,7 +151,7 @@ points(x.vals.tp53,y.vals.tp53, xlim=c(0,x.upper), ylim=c(0,y.upper), pch=22, bg
 tick.marks.heights.rhs <- c(0:scaling.for.mut.freq)
 tick.marks.labels.rhs <- (100/scaling.for.mut.freq)*tick.marks.heights.rhs
 axis(4,at=tick.marks.heights.rhs, labels=tick.marks.labels.rhs, las=2, cex.axis=0.8)
-mtext("Percent of Samples\nwith TP53 Mutation", side = 4, line = 3, cex = 0.8)
+mtext("Percent of Samples\nwith TP53 Mutation", side = 4, line = 3, cex = 0.7)
 
 
 par(oma = c(0, 0, 0, 0), mar = c(0, 0, 0, 0), new = TRUE)

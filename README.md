@@ -1,10 +1,16 @@
 # sMACHETE
-Code used for running the sMACHETE, for the portion after running the
-MACHETE on the Seven Bridges Cancer Genomics Cloud (CGC), for the paper
+Code used for running the sMACHETE for the paper:
 
 Precise, pan-cancer discovery of gene fusions reveals a signature of
 selection in primary tumors, by Donald Eric Freeman, Gillian Lee Hsieh,
 Jonathan Michael Howard, Erik Lehnert, and Julia Salzman.
+
+The code here is used in particular for implementing the postprocessing
+of MACHETE output after running the MACHETE on the Seven Bridges Cancer
+Genomics Cloud (CGC), for generation of the SBT queries, and for
+implementing the statistical thresholds described in the paper.  The
+code here also includes code to generate two of the figures and many of
+the specific results mentioned in the text.
 
 There are two key scripts that run the other scripts:
 (i) setup_SBT_queries.pl
