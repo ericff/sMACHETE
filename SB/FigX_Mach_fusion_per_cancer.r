@@ -167,7 +167,7 @@ total.scalpel.counts.for.plotting <- total.scalpel.counts
 
 plot.total.scalpel.counts.version.a=total.scalpel.counts.for.plotting[which(!is.na(total.scalpel.counts[,4])),]
 
-pdf(file="../Fig_5_barplots_scatterplots.pdf")
+pdf(file="../Fig_5_barplots_scatterplots.pdf", onefile=T, paper='USr')
 
 ## par(mfrow=c(2,2))
 layout(matrix(c(1,1,3,3,4,2,2,5,5,6), 2, 5, byrow = TRUE))

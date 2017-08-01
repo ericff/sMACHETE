@@ -1141,5 +1141,21 @@ write.table(file="../FIG4_AML_names.txt",(amlONE),quote=F) ## used in ppt
 dev.off()
 
 
+## 
+print("How many genes are there that show up in our list of fusions?")
+n.genes.showing.up <- length(unique(union(tablex$gene1[tablex$tcganame!="TCGA-BODY"],tablex$gene2[tablex$tcganame!="TCGA-BODY"])))
+print(n.genes.showing.up)
+## 1306
 
+n.fusions.genes.calculation <- length(unique(tablex$genenames[tablex$tcganame!="TCGA-BODY"]))
+
+## n = n.genes.showing.up^2
+t0.genes = n.fusions.genes.calculation/sqrt(n.genes.showing.up*(n.genes.showing.up-1))
+m.genes = 100
+
+print("prob.T.over.root.n.leq.t(t=t0.genes, m=m.genes)")
+print(prob.T.over.root.n.leq.t(t=t0.genes, m=m.genes))
+
+print("prob.T.over.root.n.leq.t(t=t0.genes, m=10)")
+print(prob.T.over.root.n.leq.t(t=t0.genes, m=10))
 
